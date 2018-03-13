@@ -4,11 +4,11 @@
  * COLORS
  */
 
-$body-bg:           #f2e9dd;
+$body-bg:           white;
 
-$color-primary:     #fa4a77;
-$color-primary-dark: #ba284d;
-$color-secondary:   #56e18b;
+$color-primary:     #bde710;
+$color-primary-dark: #98d705;
+$color-secondary:   #4c97f3;
 $color-text-base:   #7b7c7e;
 
 $color-success:     $color-secondary;
@@ -21,7 +21,9 @@ $color-black:       black;
 $color-lightgray-1: #f9f9f7;
 $color-lightgray-2: #f0f0ee;
 $color-lightgray-3: #e0e0dd;
-$color-gray-1:      #777;
+$color-gray-1:      #c3c3c3;
+$color-gray-2:      #aaa;
+$color-gray-3:      #777;
 $color-darkgray-1:  #353638;
 $color-darkgray-2:  #222222;
 
@@ -49,7 +51,7 @@ $font-family-headings:  "Knewave", cursive;
 $font-size-base:        1rem;
 $line-height-base:      1.45;
 
-$font-size-base:              1rem !default; 
+$font-size-base:              1rem !default;
 $font-size-lg:                ($font-size-base * 1.25) !default;
 $font-size-sm:                ($font-size-base * .875) !default;
 

@@ -9,95 +9,95 @@
 
 // Generated palletes from http://mcg.mbitson.com/
 
-$md-kortdatum-primary: (
-    50 : #fee9ef,
-    100 : #fec9d6,
-    200 : #fda5bb,
-    300 : #fc80a0,
-    400 : #fb658b,
-    500 : $color-primary,
-    600 : #f9436f,
-    700 : #f93a64,
-    800 : #f8325a,
-    900 : $color-primary-dark,
-    A100 : #ffffff,
-    A200 : #fffcfc,
-    A400 : #ffc9d1,
-    A700 : #ffafbb,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #000000,
-        400 : #000000,
-        500 : #ffffff,
-        600 : #ffffff,
-        700 : #ffffff,
-        800 : #ffffff,
-        900 : #ffffff,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
-    )
+$md-tennisbana-primary: (
+  50 : #f7fce2,
+  100 : #ebf8b7,
+  200 : #def388,
+  300 : #d1ee58,
+  400 : #c7eb34,
+  500 : $color-primary,
+  600 : #b7e40e,
+  700 : #aee00c,
+  800 : #a6dd09,
+  900 : $color-primary-dark,
+  A100 : #ffffff,
+  A200 : #eeffcc,
+  A400 : #ddff99,
+  A700 : #d5ff80,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #000000,
+      800 : #000000,
+      900 : #000000,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
 );
 
-$md-kortdatum-secondary: (
-    50 : #ebfbf1,
-    100 : #ccf6dc,
-    200 : #abf0c5,
-    300 : #89eaae,
-    400 : #6fe69c,
-    500 : $color-secondary,
-    600 : #4fdd83,
-    700 : #45d978,
-    800 : #3cd56e,
-    900 : #2bcd5b,
-    A100 : #ffffff,
-    A200 : #daffe4,
-    A400 : #a7ffbf,
-    A700 : #8effad,
-    contrast: (
-        50 : #000000,
-        100 : #000000,
-        200 : #000000,
-        300 : #000000,
-        400 : #000000,
-        500 : #ffffff,
-        600 : #ffffff,
-        700 : #ffffff,
-        800 : #ffffff,
-        900 : #ffffff,
-        A100 : #000000,
-        A200 : #000000,
-        A400 : #000000,
-        A700 : #000000,
-    )
+$md-tennisbana-secondary: (
+  50 : #eaf3fe,
+  100 : #c9e0fb,
+  200 : #a6cbf9,
+  300 : #82b6f7,
+  400 : #67a7f5,
+  500 : $color-secondary,
+  600 : #458ff1,
+  700 : #3c84ef,
+  800 : #337aed,
+  900 : #2469ea,
+  A100 : #ffffff,
+  A200 : #f1f5ff,
+  A400 : #bed3ff,
+  A700 : #a4c1ff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+  )
 );
 
 
 // Define the theme.
-$kortdatum-app-primary: mat-palette($md-kortdatum-primary, 500, 900);
-$kortdatum-app-accent:  mat-palette($md-kortdatum-secondary);
-$kortdatum-app-theme:   mat-light-theme($kortdatum-app-primary, $kortdatum-app-accent);
+$tennisbana-app-primary: mat-palette($md-tennisbana-primary, 500, 900);
+$tennisbana-app-accent:  mat-palette($md-tennisbana-secondary);
+$tennisbana-app-theme:   mat-light-theme($tennisbana-app-primary, $tennisbana-app-accent);
 
 // Include the theme styles for only specified components.
-@include mat-core-theme($kortdatum-app-theme);
-// @include mat-autocomplete-theme($kortdatum-app-theme);
-// @include mat-button-theme($kortdatum-app-theme);
-// @include mat-checkbox-theme($kortdatum-app-theme);
-// @include mat-dialog-theme($kortdatum-app-theme);
-// @include mat-tabs-theme($kortdatum-app-theme);
-// @include mat-form-field-theme($kortdatum-app-theme);
-// @include mat-input-theme($kortdatum-app-theme);
-// @include mat-menu-theme($kortdatum-app-theme);
-// @include mat-icon-theme($kortdatum-app-theme);
-// @include mat-expansion-panel-theme($kortdatum-app-theme);
-// @include mat-toolbar-theme($kortdatum-app-theme);
-// @include mat-datepicker-theme($kortdatum-app-theme);
-// @include mat-checkbox-theme($kortdatum-app-theme);
-// @include mat-select-theme($kortdatum-app-theme);
-// @include mat-tooltip-theme($kortdatum-app-theme);
+@include mat-core-theme($tennisbana-app-theme);
+// @include mat-autocomplete-theme($tennisbana-app-theme);
+// @include mat-button-theme($tennisbana-app-theme);
+// @include mat-checkbox-theme($tennisbana-app-theme);
+// @include mat-dialog-theme($tennisbana-app-theme);
+// @include mat-tabs-theme($tennisbana-app-theme);
+// @include mat-form-field-theme($tennisbana-app-theme);
+// @include mat-input-theme($tennisbana-app-theme);
+// @include mat-menu-theme($tennisbana-app-theme);
+// @include mat-icon-theme($tennisbana-app-theme);
+// @include mat-expansion-panel-theme($tennisbana-app-theme);
+// @include mat-toolbar-theme($tennisbana-app-theme);
+// @include mat-datepicker-theme($tennisbana-app-theme);
+// @include mat-checkbox-theme($tennisbana-app-theme);
+// @include mat-select-theme($tennisbana-app-theme);
+// @include mat-tooltip-theme($tennisbana-app-theme);
 
 
 body {
