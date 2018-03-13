@@ -7,9 +7,10 @@
 
 .logo {
   display: block;
-  width: 60%;
+  width: 66%;
   position: relative;
   top: 1em;
+  @include SCREEN { left: 2em; }
 
   h1 {
     padding: 0;
