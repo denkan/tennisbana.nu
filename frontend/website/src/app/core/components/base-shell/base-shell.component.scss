@@ -1,0 +1,13 @@
+@import "variables";
+
+:host {
+    display: block;
+    background: $body-bg repeat center center;
+}
+
+
+
+.site-main {
+    background: $color-white;
+    min-height: 300px;
+}

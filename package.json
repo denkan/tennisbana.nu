@@ -1,0 +1,15 @@
+{
+  "name": "tennisbana.nu",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup:backend": "cd backend/ && npm install && cd ..",
+    "setup:sdk": "node ./_scripts/install-sdk",
+    "setup": "npm run setup:backend && npm run setup:sdk",
+    "start": "cd backend/ && node server/server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}

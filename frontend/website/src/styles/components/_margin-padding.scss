@@ -1,0 +1,51 @@
+
+/**
+ * Margins & Paddings
+ */
+ $margin-padding-spaces: (
+    "0":   0em,
+    "025": 0.25em,
+    "05":  0.5em,
+    "1":   1em,
+    "2":   2em,
+    "3":   3em,
+    "4":   4em,
+    "5":   5em,
+    "10":  10em,
+    "1p":  1%,
+    "2p":  2%,
+    "3p":  3%,
+    "4p":  4%,
+    "5p":  5%,
+    "10p": 10%
+);
+$margin-padding-prefixes: (
+    "margin": "m",
+    "padding": "p"
+);
+$margin-padding-screen-sizes: (
+    'xs',
+    'sm',
+    'md',
+    'lg',
+);
+@each $size in $margin-padding-screen-sizes {
+    @include MIN-SCREEN($size){
+        @each $name, $space in $margin-padding-spaces {
+            @each $type, $mp in $margin-padding-prefixes {
+                $mpp: $mp; // tag prefix
+                $stag: ""; // size tag, e g "-sm"
+                @if $size != "xs" {
+                    $stag: "-" + $size;
+                }
+                .#{$mpp}#{$stag}-#{$name}  { #{$type}: $space !important; }
+                .#{$mpp}t#{$stag}-#{$name} { #{$type}-top: $space !important; }
+                .#{$mpp}l#{$stag}-#{$name} { #{$type}-left: $space !important; }
+                .#{$mpp}r#{$stag}-#{$name} { #{$type}-right: $space !important; }
+                .#{$mpp}b#{$stag}-#{$name} { #{$type}-bottom: $space !important; }
+                .#{$mpp}x#{$stag}-#{$name} { #{$type}-left: $space !important; #{$type}-right: $space !important; }
+                .#{$mpp}y#{$stag}-#{$name} { #{$type}-top: $space !important; #{$type}-bottom: $space !important; }
+            }
+        }
+    }
+}

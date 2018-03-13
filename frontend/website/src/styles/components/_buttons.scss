@@ -1,0 +1,115 @@
+
+.btn, .btn.mat-button {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: $font-family-base;
+    font-size: 0.75em;
+    line-height: $line-height-base;
+    padding: REL-SIZE(0.5) REL-SIZE(1.5);
+    border-radius: REL-SIZE(0.25);
+    background: transparent;
+    border: REL-SIZE(0.075) solid transparent;
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+
+    @include MOBILE { padding: REL-SIZE(0.5) REL-SIZE(1); }
+
+    &:focus {
+        outline: none;
+        &:after {
+            display: block;
+            content: " ";
+            @include FULL-BLOW;
+            background: rgba($color-black, 0.05);
+        }
+    }
+
+
+    /**
+     * Sizes
+     */
+    &.btn-full {
+        width: 100%;
+    }
+    &.btn-lg {
+        @include FONT-SIZE(1.1);
+        padding: REL-SIZE(0.75) REL-SIZE(2);
+    }
+    &.btn-sm {
+        @include FONT-SIZE(0.9);
+        padding: REL-SIZE(0.35) REL-SIZE(1);
+    }
+    &.btn-xs {
+        @include FONT-SIZE(0.75);
+        padding: REL-SIZE(0.25) REL-SIZE(0.75);
+    }
+
+
+    /**
+     * Colors
+     */
+
+    &.btn-primary {
+        background: $color-primary;
+        color: $color-white;
+    }
+    &.btn-primary-dark {
+        background: $color-primary-dark;
+        color: $color-white;
+    }
+    &.btn-secondary {
+        background: $color-secondary;
+        &, &:active { color: $color-white; }
+    }
+    &.btn-success {
+        background: $color-success;
+        color: $color-white;
+    }
+    &.btn-danger {
+        background: $color-danger;
+        color: $color-white;
+    }
+    &.btn-warning {
+        background: $color-warning;
+        color: $color-white;
+    }
+    &.btn-info {
+        background: $color-info;
+        color: $color-white;
+    }
+
+
+    /**
+     * Outlined
+     */
+
+    &.btn-outline {
+        border-color: $color-text-base;
+    }
+    &.btn-outline-primary {
+        border-color: $color-primary;
+        color: $color-primary;
+    }
+    &.btn-outline-secondary {
+        border-color: $color-secondary;
+        color: $color-secondary;
+    }
+    &.btn-outline-success {
+        border-color: $color-success;
+        color: $color-success;
+    }
+    &.btn-outline-danger {
+        border-color: $color-danger;
+        color: $color-danger;
+    }
+    &.btn-outline-warning {
+        border-color: $color-warning;
+        color: $color-warning;
+    }
+    &.btn-outline-info {
+        border-color: $color-info;
+        color: $color-info;
+    }
+
+}

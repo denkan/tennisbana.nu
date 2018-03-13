@@ -1,0 +1,10 @@
+{
+  "db-memory1": {
+    "name": "db-memory1",
+    "connector": "memory"
+  },
+  "db-mysql1": {
+    "name": "db-mysql1",
+    "connector": "mysql"
+  }
+}

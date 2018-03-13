@@ -1,0 +1,127 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// **Be sure that you only ever include this mixin once!**
+@include mat-core();
+
+
+// Generated palletes from http://mcg.mbitson.com/
+
+$md-kortdatum-primary: (
+    50 : #fee9ef,
+    100 : #fec9d6,
+    200 : #fda5bb,
+    300 : #fc80a0,
+    400 : #fb658b,
+    500 : $color-primary,
+    600 : #f9436f,
+    700 : #f93a64,
+    800 : #f8325a,
+    900 : $color-primary-dark,
+    A100 : #ffffff,
+    A200 : #fffcfc,
+    A400 : #ffc9d1,
+    A700 : #ffafbb,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$md-kortdatum-secondary: (
+    50 : #ebfbf1,
+    100 : #ccf6dc,
+    200 : #abf0c5,
+    300 : #89eaae,
+    400 : #6fe69c,
+    500 : $color-secondary,
+    600 : #4fdd83,
+    700 : #45d978,
+    800 : #3cd56e,
+    900 : #2bcd5b,
+    A100 : #ffffff,
+    A200 : #daffe4,
+    A400 : #a7ffbf,
+    A700 : #8effad,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+// Define the theme.
+$kortdatum-app-primary: mat-palette($md-kortdatum-primary, 500, 900);
+$kortdatum-app-accent:  mat-palette($md-kortdatum-secondary);
+$kortdatum-app-theme:   mat-light-theme($kortdatum-app-primary, $kortdatum-app-accent);
+
+// Include the theme styles for only specified components.
+@include mat-core-theme($kortdatum-app-theme);
+// @include mat-autocomplete-theme($kortdatum-app-theme);
+// @include mat-button-theme($kortdatum-app-theme);
+// @include mat-checkbox-theme($kortdatum-app-theme);
+// @include mat-dialog-theme($kortdatum-app-theme);
+// @include mat-tabs-theme($kortdatum-app-theme);
+// @include mat-form-field-theme($kortdatum-app-theme);
+// @include mat-input-theme($kortdatum-app-theme);
+// @include mat-menu-theme($kortdatum-app-theme);
+// @include mat-icon-theme($kortdatum-app-theme);
+// @include mat-expansion-panel-theme($kortdatum-app-theme);
+// @include mat-toolbar-theme($kortdatum-app-theme);
+// @include mat-datepicker-theme($kortdatum-app-theme);
+// @include mat-checkbox-theme($kortdatum-app-theme);
+// @include mat-select-theme($kortdatum-app-theme);
+// @include mat-tooltip-theme($kortdatum-app-theme);
+
+
+body {
+    // dialogs
+    .mat-dialog-container { padding: 0; }
+    .cdk-overlay-pane {
+        @include MOBILE { max-width: 95% !important; }
+        @include SCREEN {
+            &.xs { width: 20em; }
+            &.sm { width: 30em; }
+            &.md { width: 50em; }
+            &.lg { width: 70em; }
+        }
+    }
+
+    // mat-menu
+    .mat-menu-item {
+        font-size: 0.9em;
+        line-height: 2;
+        height: auto;
+
+        &:focus {
+            outline: none;
+            background: rgba(black, 0.04);
+        }
+    }
+}

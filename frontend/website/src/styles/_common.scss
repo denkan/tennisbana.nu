@@ -1,0 +1,19 @@
+
+body { 
+    background: $color-darkgray-2;
+    margin: 0;
+    padding: 0;
+
+    font-family: $font-family-base; 
+    font-size: $font-size-base;
+    color: $color-text-base;
+    -webkit-font-smoothing: antialiased;
+}
+
+:focus, button:focus { outline: none; }
+
+.form-control::placeholder {
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.65;
+}

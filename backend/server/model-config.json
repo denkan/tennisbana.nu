@@ -1,0 +1,53 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins",
+      "../node_modules/@mean-expert/loopback-stats-mixin/dist",
+      "../node_modules/@mean-expert/loopback-component-realtime/dist/mixins",
+      "../node_modules/loopback-ds-timestamp-mixin",
+      "../node_modules/loopback-setup-remote-methods-mixin",
+      "../node_modules/loopback-softdelete"
+    ]
+  },
+  "AccessToken": {
+    "dataSource": "db-mysql1",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db-mysql1",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db-mysql1",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "db-mysql1",
+    "public": false
+  },
+  "Location": {
+    "dataSource": "db-mysql1",
+    "public": true
+  },
+  "GoogleMaps": {
+    "dataSource": null,
+    "public": false
+  },
+  "Cache": {
+    "dataSource": null,
+    "public": false
+  },
+  "BaseUser": {
+    "dataSource": null,
+    "public": false
+  }
+}

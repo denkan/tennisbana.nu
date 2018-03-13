@@ -1,0 +1,101 @@
+@import "mixins";
+
+/**
+ * COLORS
+ */
+
+$body-bg:           #f2e9dd;
+
+$color-primary:     #fa4a77;
+$color-primary-dark: #ba284d;
+$color-secondary:   #56e18b;
+$color-text-base:   #7b7c7e;
+
+$color-success:     $color-secondary;
+$color-danger:      #df4a4f;
+$color-warning:     #f07b26;
+$color-info:        #1177c8;
+
+$color-white:       white;
+$color-black:       black;
+$color-lightgray-1: #f9f9f7;
+$color-lightgray-2: #f0f0ee;
+$color-lightgray-3: #e0e0dd;
+$color-gray-1:      #777;
+$color-darkgray-1:  #353638;
+$color-darkgray-2:  #222222;
+
+// re-write bootstrap
+$primary:       $color-primary;
+$secondary:     $color-secondary;
+$success:       $color-success;
+$info:          $color-info;
+$warning:       $color-warning;
+$danger:        $color-danger;
+$light:         $color-lightgray-1;
+$dark:          $color-darkgray-2;
+
+
+
+/**
+ * TYPOGRAPHY
+ */
+
+$font-family-base:      "proxima-nova", "Sans-serif";
+$font-family-condensed: "proxima-nova-condensed", "Sans-serif";
+$font-family-handwrite: "marydale", "Sans-serif";
+$font-family-headings:  "Knewave", cursive;
+
+$font-size-base:        1rem;
+$line-height-base:      1.45;
+
+$font-size-base:              1rem !default; 
+$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-sm:                ($font-size-base * .875) !default;
+
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+$h1-font-size:                $font-size-base * 2 !default;
+$h2-font-size:                $font-size-base * 1.6 !default;
+$h3-font-size:                $font-size-base * 1.5 !default;
+$h4-font-size:                $font-size-base * 1.35 !default;
+$h5-font-size:                $font-size-base * 1.2 !default;
+$h6-font-size:                $font-size-base !default;
+
+//$headings-margin-bottom:      ($spacer / 2) !default;
+$headings-font-family:        inherit !default;
+$headings-font-weight:        $font-weight-bold;
+$headings-line-height:        1.2 !default;
+$headings-color:              inherit !default;
+
+
+
+/**
+ * SCREEN SIZES AND GRIDS
+ */
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$grid-columns:                24 !default;
+$grid-gutter-width:           30px !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";

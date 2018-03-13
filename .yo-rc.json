@@ -1,0 +1,22 @@
+{
+  "generator-fireloop": {
+    "version": "1.0.0-beta.2.7",
+    "clients": {
+      "backend": {
+        "path": "./backend",
+        "type": "server"
+      },
+      "website": {
+        "path": "./frontend/website",
+        "type": "ng2web",
+        "name": "website",
+        "sdkPath": "_shared/sdk"
+      }
+    },
+    "promptValues": {
+      "sdkFeatures": [
+        "Generate ONLY FireLoop SDK + Auth Services"
+      ]
+    }
+  }
+}
