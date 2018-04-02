@@ -1,7 +1,0 @@
-{
-  "db-mysql1": {
-    "name": "db-mysql1",
-    "connector": "mysql",
-    "url": "mysql://dbuser:dbpass@dbhost:3306/dbname"
-  }
-}
