@@ -1,1 +1,1 @@
-let myApp = new App;
+let app = new App;
