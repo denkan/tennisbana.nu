@@ -1,137 +1,29 @@
 [
   {
-    "show": {
-      "date": "2018-02-03",
-      "auditorium": "Lilla Salongen",
-      "film": "Let The Sunshine In",
-      "time": "21.00",
-      "bookedSeats": [
-        1,
-        2,
-        3
-      ],
-      "userID": "4ARVGJUZn77h",
-      "orderID": "QW32zlGEk"
-    }
+    "title": "Gunnesbo",
+    "description": "En inomhusbana och två utomhusbanor. Boka via...",
+    "courtType": ["fribana", "inomhus"],
+    "courtSurface": ["hardcourt", "grus"],
+    "courtQuality": ["låg"],
+    "latitude": "55.7209369679304",
+    "longitude": "13.1598554523846"
   },
   {
-    "show": {
-      "date": "2018-02-13",
-      "auditorium": "Lilla Salongen",
-      "film": "Call Me By Your Name",
-      "time": "21.00",
-      "bookedSeats": [
-        1,
-        2,
-        3
-      ],
-      "userID": "4ARVGJUZn77h",
-      "orderID": "3s4sl2Q3T"
-    }
+    "title": "Nöbbelöv",
+    "description": "En inomhusbana och två utomhusbanor. Boka via...",
+    "courtType": ["fribana", "inomhus"],
+    "courtSurface": ["hardcourt", "grus"],
+    "courtQuality": ["låg"],
+    "latitude": "55.7209369679304",
+    "longitude": "13.1598554523846"
   },
   {
-    "show": {
-      "date": "2018-03-01",
-      "auditorium": "Lilla Salongen",
-      "film": "Wind River",
-      "time": "22.40",
-      "bookedSeats": [
-        1,
-        2,
-        3
-      ],
-      "userID": "4ARVGJUZn77h",
-      "orderID": "FhPeGZRhM"
-    }
-  },
-  {
-    "show": {
-      "date": "2018-03-01",
-      "auditorium": "Lilla Salongen",
-      "film": "Wind River",
-      "time": "22.40",
-      "bookedSeats": [],
-      "userID": "4ARVGJUZn77h"
-    }
-  },
-  {
-    "show": {
-      "date": "2018-03-03",
-      "auditorium": "Lilla Salongen",
-      "film": "Call Me By Your Name",
-      "time": "18.40",
-      "bookedSeats": [
-        27,
-        28,
-        29
-      ],
-      "userID": "4ARVGJUZn77h",
-      "orderID": "q3uvSLpAS"
-    }
-  },
-  {
-    "show": {
-      "date": "2018-03-05",
-      "auditorium": "Stora Salongen",
-      "film": "Call Me By Your Name",
-      "time": "22.40",
-      "bookedSeats": [],
-      "userID": "4ARVGJUZn77h"
-    }
-  },
-  {
-    "show": {
-      "date": "2018-03-05",
-      "auditorium": "Stora Salongen",
-      "film": "Call Me By Your Name",
-      "time": "22.40",
-      "bookedSeats": [
-        3,
-        4
-      ],
-      "userID": "4ARVGJUZn77h",
-      "orderID": "P2wzLGs0H"
-    }
-  },
-  {
-    "show": {
-      "date": "2018-03-08",
-      "auditorium": "Stora Salongen",
-      "film": "Wind River",
-      "time": "21.00",
-      "bookedSeats": [
-        27
-      ],
-      "userID": "tpMOBW5ArFvc",
-      "orderID": "rXdccOnlj"
-    }
-  },
-  {
-    "show": {
-      "date": "2018-03-03",
-      "auditorium": "Lilla Salongen",
-      "film": "Call Me By Your Name",
-      "time": "18.40",
-      "bookedSeats": [
-        1
-      ],
-      "userID": "tpMOBW5ArFvc",
-      "orderID": "0xggiIrvz"
-    }
-  },
-  {
-    "show": {
-      "date": "2018-03-03",
-      "auditorium": "Lilla Salongen",
-      "film": "Call Me By Your Name",
-      "time": "18.40",
-      "bookedSeats": [
-        10,
-        11,
-        12
-      ],
-      "userID": "tpMOBW5ArFvc",
-      "orderID": "m5Vcz0Es4"
-    }
+    "title": "Stångby",
+    "description": "En inomhusbana och två utomhusbanor. Boka via...",
+    "courtType": ["fribana", "inomhus"],
+    "courtSurface": ["hardcourt", "grus"],
+    "courtQuality": ["låg"],
+    "latitude": "55.7209369679304",
+    "longitude": "13.1598554523846"
   }
 ]
