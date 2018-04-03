@@ -1,9 +1,10 @@
 class Footer extends Base {
 	constructor(){
 		super()
-		this.footerFix();
+
+    this.render('footer');
+    this.footerFix();
 		this.fixOnResize();
-		this.render('footer');
 	}
 
 	footerFix(){

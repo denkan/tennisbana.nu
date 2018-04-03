@@ -9,6 +9,119 @@ html {
   position: relative;
   min-height: 100%;
 }
+main .filter-holder {
+  background: #c2c2c2;
+}
+main .filter-holder a:hover {
+  text-decoration: none;
+}
+main .filter-holder .filter-heading:hover {
+  text-decoration: none;
+  background: #5e5e5e;
+}
+main .filter-holder .filter-heading {
+  background: #949494;
+  color: #fff;
+}
+main .filter-holder .filter-secondary-heading {
+  background: #f0f0f0;
+  color: #949494;
+}
+main .filter-holder .filter-toggle {
+  background: #c2c2c2;
+  color: #fff;
+  padding: 10px 0px 0px 30px;
+}
+main .filter-holder .filter-heading,
+main .filter-holder .filter-secondary-heading {
+  padding: 10px 0px 10px 20px;
+}
+main .court-holder {
+  background: #c2c2c2;
+}
+main .court-holder .court-heading {
+  background: #949494;
+  color: #fff;
+}
+main .court-holder .court-item {
+  background: #f0f0f0;
+  color: black;
+}
+.cmn-toggle {
+  position: absolute;
+  margin-left: -9999px;
+  visibility: hidden;
+}
+.cmn-toggle + label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+input.cmn-toggle-round-flat + label {
+  padding: 2px;
+  width: 40px;
+  height: 20px;
+  background-color: #000;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  transition: background 0.4s;
+}
+input.cmn-toggle-round-flat + label:before,
+input.cmn-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: "";
+}
+input.cmn-toggle-round-flat {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #000;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-transition: background 0.4s;
+  -moz-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  transition: background 0.4s;
+}
+input.cmn-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 12px;
+  background-color: #fff;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  border-radius: 12px;
+  -webkit-transition: margin 0.4s, background 0.4s;
+  -moz-transition: margin 0.4s, background 0.4s;
+  -o-transition: margin 0.4s, background 0.4s;
+  transition: margin 0.4s, background 0.4s;
+}
+input.cmn-toggle-round-flat:checked + label {
+  background-color: #4BB543;
+}
+input.cmn-toggle-round-flat:checked + label:after {
+  margin-left: 20px;
+}
+[data-toggle="collapse"].collapsed i:before {
+  content: "\f067";
+}
+[data-toggle="collapse"] i:before {
+  content: "\f068";
+}
 footer {
   position: absolute;
   bottom: 0;
@@ -16,4 +129,7 @@ footer {
   /* Set the fixed height of the footer here */
   height: auto;
   line-height: 30px;
+}
+header {
+  background: linear-gradient(to bottom, #000000 0%, #000000 85%, #c2c2c2 85%, #c2c2c2 100%);
 }
