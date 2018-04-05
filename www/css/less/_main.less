@@ -1,14 +1,15 @@
 *,
 *:before,
 *:after {
- -webkit-box-sizing: border-box;
- -moz-box-sizing: border-box;
- box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
   body {
-    font-family: 'Titillium Web', sans-serif;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.95em;
   }
 
   position: relative;
@@ -18,7 +19,7 @@ html {
 main {
   .filter-holder {
     background: @mainGray;
-    
+
     a:hover {
       text-decoration: none;
     }
@@ -37,17 +38,16 @@ main {
       background: @secondaryGray;
       color: @selectedGray;
     }
-    .filter-toggle{
+    .filter-toggle {
       background: @mainGray;
       color: #fff;
       padding: 10px 0px 0px 30px;
     }
-    .filter-heading, .filter-secondary-heading{
+    .filter-heading,
+    .filter-secondary-heading {
       padding: 10px 0px 10px 20px;
     }
-    
   }
-
 
   .court-holder {
     background: @mainGray;
@@ -61,7 +61,6 @@ main {
       color: black;
     }
   }
-
 }
 
 // Toggle-button-css
@@ -90,7 +89,8 @@ input.cmn-toggle-round-flat + label {
   -o-transition: background 0.4s;
   transition: background 0.4s;
 }
-input.cmn-toggle-round-flat + label:before, input.cmn-toggle-round-flat + label:after {
+input.cmn-toggle-round-flat + label:before,
+input.cmn-toggle-round-flat + label:after {
   display: block;
   position: absolute;
   content: "";
@@ -128,17 +128,17 @@ input.cmn-toggle-round-flat + label:after {
   transition: margin 0.4s, background 0.4s;
 }
 input.cmn-toggle-round-flat:checked + label {
-  background-color: #4BB543;
+  background-color: #4bb543;
 }
 input.cmn-toggle-round-flat:checked + label:after {
   margin-left: 20px;
 }
 
 // Arrows
-[data-toggle="collapse"].collapsed i:before{
+[data-toggle="collapse"].collapsed i:before {
   content: "\f067";
 }
 
-[data-toggle="collapse"] i:before{
+[data-toggle="collapse"] i:before {
   content: "\f068";
 }
