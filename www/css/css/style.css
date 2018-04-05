@@ -13,6 +13,9 @@ html body {
   font-family: "Roboto", sans-serif;
   font-size: 0.95em;
 }
+main #map {
+  min-height: 500px;
+}
 main .filter-holder {
   background: #c2c2c2;
 }

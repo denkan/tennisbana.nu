@@ -9,11 +9,13 @@ Object.assign(Startpage.prototype, { template(){ return `
     <div class="collapse show" id="collapseFilter">
       <div class="card card-body p-0 border-0">
         <a class="p-0 m-0 border-0" data-toggle="collapse" href="#collapse-court-type" role="button" aria-expanded="false" aria-controls="collapse-court-type">
-          <div class="filter-secondary-heading"><i class="fa mr-2" aria-hidden="true"></i>Banor</div>
+          <div class="filter-secondary-heading">
+            <i class="fa mr-2" aria-hidden="true"></i>Banor</div>
         </a>
 
 
         <div class="collapse show" id="collapse-court-type">
+
           <div class="filter-toggle d-flex flex-row flex-nowrap">
             <p>Fribana</p>
             <div class="switch ml-auto mt-1 pr-2">
@@ -21,6 +23,7 @@ Object.assign(Startpage.prototype, { template(){ return `
               <label for="free-court"></label>
             </div>
           </div>
+
 
           <div class="filter-toggle d-flex flex-row flex-nowrap">
             <p>Betalbana</p>
@@ -49,7 +52,8 @@ Object.assign(Startpage.prototype, { template(){ return `
 
 
         <a class="p-0" data-toggle="collapse" href="#collapse-surface" role="button" aria-expanded="false" aria-controls="collapse-surface">
-          <div class="filter-secondary-heading"><i class="fa mr-2" aria-hidden="true"></i>Underlag</div>
+          <div class="filter-secondary-heading">
+            <i class="fa mr-2" aria-hidden="true"></i>Underlag</div>
         </a>
         <div class="collapse show" id="collapse-surface">
           <div class="filter-toggle d-flex flex-row flex-nowrap">
@@ -87,7 +91,8 @@ Object.assign(Startpage.prototype, { template(){ return `
 
 
         <a class="p-0" data-toggle="collapse" href="#collapse-quality" role="button" aria-expanded="false" aria-controls="collapse-quality">
-          <div class="filter-secondary-heading"><i class="fa mr-2" aria-hidden="true"></i>Kvalitet</div>
+          <div class="filter-secondary-heading">
+            <i class="fa mr-2" aria-hidden="true"></i>Kvalitet</div>
         </a>
 
         <div class="collapse show" id="collapse-quality">
@@ -120,10 +125,12 @@ Object.assign(Startpage.prototype, { template(){ return `
   </div>
 
 
-  <div class="col-lg-7">Map</div>
+  <div class="col-lg-7" id="map">
+
+
+  </div>
 
 
   <div class="col-lg-3 court-holder p-0">
-    ${this.renderCourt()}
   </div>
   `;}});

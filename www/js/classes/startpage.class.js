@@ -4,6 +4,7 @@ class Startpage extends Base {
 		this.checkAllChecked();
 		this.render();
 		this.renderCourt();
+		this.initMap();
   }
 
   renderCourt() {
@@ -48,39 +49,22 @@ class Startpage extends Base {
   filterArray() {
     this.filteredArray = [];
     this.filteredArray = app.allCourts.filter(court => {
-      let ctValid = false;
-      let stValid = false;
-      let qtValid = false;
-
-      if (this.courtType.length === 0) {
-        ctValid = true;
-      } else {
-        for (let item of this.courtType) {
-          if (court.courtType.includes(item)) {
-            ctValid = true;
-          }
-        }
-      }
-
-      if (this.surfaceType.length === 0) {
-        stValid = true;
-      } else {
-        for (let item of this.surfaceType) {
-          if (court.courtSurface.includes(item)) {
-            stValid = true;
-          }
-        }
-      }
-
-      if (this.qualityType.length === 0) {
-        qtValid = true;
-      } else {
-        for (let item of this.qualityType) {
-          if (court.courtQuality.includes(item)) {
-            qtValid = true;
-          }
-        }
-      }
+      let ctValid = checkIfValid(this.courtType, court.courtType);
+      let stValid = checkIfValid(this.surfaceType, court.courtSurface);
+			let qtValid = checkIfValid(this.qualityType, court.courtQuality);
+			
+			function checkIfValid(compareArray, fullArray){
+				if (compareArray.length === 0) {
+					return true;
+				} else {
+					for (let item of compareArray) {
+						if (fullArray.includes(item)) {
+							return true;
+						}
+					}
+				}
+				return false;
+			}
 
       if (ctValid && stValid && qtValid) {
         return true;
@@ -89,5 +73,20 @@ class Startpage extends Base {
       }
     });
 		
-  }
+	}
+	initMap() {
+		let mapElem = document.getElementById('map');
+
+		if (!google){
+			setTimeout(() => {
+				this.initMap();
+			}, 200);
+			return
+		}
+
+    this.map = new google.maps.Map(mapElem, {
+        center: {lat: 55.7209369679304, lng: 13.1598554523846},
+        zoom: 11
+		});
+	}
 }
