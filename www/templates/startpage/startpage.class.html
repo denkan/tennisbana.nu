@@ -17,32 +17,32 @@ Object.assign(Startpage.prototype, { template(){ return `
           <div class="filter-toggle d-flex flex-row flex-nowrap">
             <p>Fribana</p>
             <div class="switch ml-auto mt-1 pr-2">
-              <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
-              <label for="cmn-toggle-1"></label>
+              <input id="free-court" name="courtType" value="fribana" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+              <label for="free-court"></label>
             </div>
           </div>
 
           <div class="filter-toggle d-flex flex-row flex-nowrap">
             <p>Betalbana</p>
             <div class="switch ml-auto mt-1 pr-2">
-              <input id="cmn-toggle-2" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
-              <label for="cmn-toggle-2"></label>
+              <input id="paid-court" name="courtType" value="betalbana" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+              <label for="paid-court"></label>
             </div>
           </div>
 
           <div class="filter-toggle d-flex flex-row flex-nowrap">
             <p>Inomhus</p>
             <div class="switch ml-auto mt-1 pr-2">
-              <input id="cmn-toggle-3" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
-              <label for="cmn-toggle-3"></label>
+              <input id="inside-court" name="courtType" value="inomhus" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+              <label for="inside-court"></label>
             </div>
           </div>
 
           <div class="filter-toggle d-flex flex-row flex-nowrap">
             <p>Utomhus</p>
             <div class="switch ml-auto mt-1 pr-2">
-              <input id="cmn-toggle-4" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
-              <label for="cmn-toggle-4"></label>
+              <input id="outside-court" name="courtType" value="utomhus" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+              <label for="outside-court"></label>
             </div>
           </div>
         </div>
@@ -55,32 +55,32 @@ Object.assign(Startpage.prototype, { template(){ return `
           <div class="filter-toggle d-flex flex-row flex-nowrap">
             <p>Hardcourt</p>
             <div class="switch ml-auto mt-1 pr-2">
-              <input id="cmn-toggle-5" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
-              <label for="cmn-toggle-5"></label>
+              <input id="hard-surface" name="courtSurface" value="hardcourt" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+              <label for="hard-surface"></label>
             </div>
           </div>
 
           <div class="filter-toggle d-flex flex-row flex-nowrap">
             <p>Grus</p>
             <div class="switch ml-auto mt-1 pr-2">
-              <input id="cmn-toggle-6" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
-              <label for="cmn-toggle-6"></label>
+              <input id="gravel-surface" name="courtSurface" value="grus" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+              <label for="gravel-surface"></label>
             </div>
           </div>
 
           <div class="filter-toggle d-flex flex-row flex-nowrap">
             <p>Filt</p>
             <div class="switch ml-auto mt-1 pr-2">
-              <input id="cmn-toggle-7" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
-              <label for="cmn-toggle-7"></label>
+              <input id="rug-surface" name="courtSurface" value="filt" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+              <label for="rug-surface"></label>
             </div>
           </div>
 
           <div class="filter-toggle d-flex flex-row flex-nowrap">
             <p>Asfalt</p>
             <div class="switch ml-auto mt-1 pr-2">
-              <input id="cmn-toggle-8" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
-              <label for="cmn-toggle-8"></label>
+              <input id="asphalt-surface" name="courtSurface" value="asfalt" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+              <label for="asphalt-surface"></label>
             </div>
           </div>
         </div>
@@ -94,24 +94,24 @@ Object.assign(Startpage.prototype, { template(){ return `
           <div class="filter-toggle d-flex flex-row flex-nowrap">
             <p>Låg</p>
             <div class="switch ml-auto mt-1 pr-2">
-              <input id="cmn-toggle-9" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
-              <label for="cmn-toggle-9"></label>
+              <input id="low-price" name="courtQuality" value="låg" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+              <label for="low-price"></label>
             </div>
           </div>
 
           <div class="filter-toggle d-flex flex-row flex-nowrap">
             <p>Mellan</p>
             <div class="switch ml-auto mt-1 pr-2">
-              <input id="cmn-toggle-10" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
-              <label for="cmn-toggle-10"></label>
+              <input id="medium-price" name="courtQuality" value="mellan" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+              <label for="medium-price"></label>
             </div>
           </div>
 
           <div class="filter-toggle d-flex flex-row flex-nowrap">
             <p>Hög</p>
             <div class="switch ml-auto mt-1 pr-2">
-              <input id="cmn-toggle-11" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
-              <label for="cmn-toggle-11"></label>
+              <input id="high-price" name="courtQuality" value="hög" class="cmn-toggle cmn-toggle-round-flat" type="checkbox">
+              <label for="high-price"></label>
             </div>
           </div>
         </div>
@@ -124,8 +124,6 @@ Object.assign(Startpage.prototype, { template(){ return `
 
 
   <div class="col-lg-3 court-holder p-0">
-    <div class="court-heading py-1 pl-3"><i class="fas fa-road mr-2"></i>Lista på banor i Lunds kommun</div>
     ${this.renderCourt()}
-
   </div>
   `;}});

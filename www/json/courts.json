@@ -2,9 +2,9 @@
   {
     "title": "Gunnesbo",
     "description": "En inomhusbana och två utomhusbanor. Boka via...",
-    "courtType": ["fribana", "inomhus"],
+    "courtType": ["betalbana", "inomhus"],
     "courtSurface": ["hardcourt", "grus"],
-    "courtQuality": ["låg"],
+    "courtQuality": ["hög"],
     "address": "Koalavägen 34 Lund 224 76",
     "latitude": "55.7209369679304",
     "longitude": "13.1598554523846"
@@ -14,7 +14,7 @@
     "description": "En inomhusbana och två utomhusbanor. Boka via...",
     "courtType": ["fribana", "inomhus"],
     "courtSurface": ["hardcourt", "grus"],
-    "courtQuality": ["låg"],
+    "courtQuality": ["låg", "medium"],
     "address": "Koalavägen 34 Lund 224 76",
     "latitude": "55.7209369679304",
     "longitude": "13.1598554523846"
@@ -22,8 +22,8 @@
   {
     "title": "Stångby",
     "description": "En inomhusbana och två utomhusbanor. Boka via...",
-    "courtType": ["fribana", "inomhus"],
-    "courtSurface": ["hardcourt", "grus"],
+    "courtType": ["betalbana", "utomhus"],
+    "courtSurface": ["hardcourt", "filt"],
     "courtQuality": ["låg"],
     "address": "Koalavägen 34 Lund 224 76",
     "latitude": "55.7209369679304",
