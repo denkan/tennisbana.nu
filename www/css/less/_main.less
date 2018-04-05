@@ -7,6 +7,10 @@
 }
 
 html {
+  body {
+    font-family: 'Titillium Web', sans-serif;
+  }
+
   position: relative;
   min-height: 100%;
 }
@@ -22,11 +26,14 @@ main {
       text-decoration: none;
       background: @mainGray - 100;
     }
-    .filter-heading{
+    .filter-heading {
       background: @selectedGray;
       color: #fff;
     }
-    .filter-secondary-heading{
+    .filter-secondary-heading:hover {
+      background: @secondaryGray + 9;
+    }
+    .filter-secondary-heading {
       background: @secondaryGray;
       color: @selectedGray;
     }
@@ -45,6 +52,7 @@ main {
   .court-holder {
     background: @mainGray;
     .court-heading {
+      font-size: 1.1em;
       background: @selectedGray;
       color: #fff;
     }

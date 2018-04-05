@@ -7,9 +7,9 @@ Object.assign(Startpage.prototype, { template(){ return `
         <i class="fa mr-2" aria-hidden="true"></i>Filter</div>
     </a>
     <div class="collapse show" id="collapseFilter">
-      <div class="card card-body p-0">
-        <a class="p-0" data-toggle="collapse" href="#collapse-court-type" role="button" aria-expanded="false" aria-controls="collapse-court-type">
-          <div class="filter-secondary-heading">Banor</div>
+      <div class="card card-body p-0 border-0">
+        <a class="p-0 m-0 border-0" data-toggle="collapse" href="#collapse-court-type" role="button" aria-expanded="false" aria-controls="collapse-court-type">
+          <div class="filter-secondary-heading"><i class="fa mr-2" aria-hidden="true"></i>Banor</div>
         </a>
 
 
@@ -49,7 +49,7 @@ Object.assign(Startpage.prototype, { template(){ return `
 
 
         <a class="p-0" data-toggle="collapse" href="#collapse-surface" role="button" aria-expanded="false" aria-controls="collapse-surface">
-          <div class="filter-secondary-heading">Underlag</div>
+          <div class="filter-secondary-heading"><i class="fa mr-2" aria-hidden="true"></i>Underlag</div>
         </a>
         <div class="collapse show" id="collapse-surface">
           <div class="filter-toggle d-flex flex-row flex-nowrap">
@@ -87,7 +87,7 @@ Object.assign(Startpage.prototype, { template(){ return `
 
 
         <a class="p-0" data-toggle="collapse" href="#collapse-quality" role="button" aria-expanded="false" aria-controls="collapse-quality">
-          <div class="filter-secondary-heading">Kvalitet</div>
+          <div class="filter-secondary-heading"><i class="fa mr-2" aria-hidden="true"></i>Kvalitet</div>
         </a>
 
         <div class="collapse show" id="collapse-quality">
@@ -124,8 +124,8 @@ Object.assign(Startpage.prototype, { template(){ return `
 
 
   <div class="col-lg-3 court-holder p-0">
-    <div class="court-heading py-1 pl-3">Lista på banor i Lunds kommun</div>
-    ${this.renderCourt()};
+    <div class="court-heading py-1 pl-3"><i class="fas fa-road mr-2"></i>Lista på banor i Lunds kommun</div>
+    ${this.renderCourt()}
 
   </div>
   `;}});
