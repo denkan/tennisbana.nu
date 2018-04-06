@@ -16,8 +16,8 @@
     "courtSurface": ["hardcourt", "grus"],
     "courtQuality": ["låg", "medium"],
     "address": "Koalavägen 34 Lund 224 76",
-    "latitude": "55.7209369679304",
-    "longitude": "13.1598554523846"
+    "latitude": "55.7238223958526",
+    "longitude": "13.2095354854462"
   },
   {
     "title": "Stångby",
@@ -26,7 +26,7 @@
     "courtSurface": ["hardcourt", "filt"],
     "courtQuality": ["låg"],
     "address": "Koalavägen 34 Lund 224 76",
-    "latitude": "55.7209369679304",
-    "longitude": "13.1598554523846"
+    "latitude": "55.6893263670235",
+    "longitude": "13.1937058794525"
   }
 ]
