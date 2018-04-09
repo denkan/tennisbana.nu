@@ -110,15 +110,15 @@ class Startpage extends Base {
   
   markOnMap(court, co){
     let myLatLng = {lat: court.latitude / 1, lng: court.longitude / 1};
-    let marker = new google.maps.Marker({
+    this.marker = new google.maps.Marker({
       position: myLatLng,
       map: this.map,
       title: `${co}. ${court.title} (${court.address})`,
       icon: `http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=${co}|5bc0de|000000`,
       courtReference: court
     });
-    this.markersArray.push(marker);
-
+    this.markersArray.push(this.marker);
+    this.mapEventHandler();
   }
 
   setMapOnAll(map) {
@@ -138,6 +138,15 @@ class Startpage extends Base {
   deleteMarkers() {
     this.clearMarkers();
     this.markersArray = [];
+  }
+
+  mapEventHandler(){
+    google.maps.event.addListener(this.marker,'mouseover',function(){
+      $('img[src="'+this.icon+'"]').stop().animate({opacity: 2});
+    });
+    google.maps.event.addListener(this.marker,'mouseout',function(){
+      $('img[src="'+this.icon+'"]').stop().animate({opacity:.5});
+    });
   }
 
 }
