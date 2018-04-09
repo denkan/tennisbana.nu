@@ -114,11 +114,28 @@ class Startpage extends Base {
       position: myLatLng,
       map: this.map,
       title: `${co}. ${court.title} (${court.address})`,
-      icon: `http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=${co}|5bc0de|000000`,
+      icon: `http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=${co}|d9534f|000000`,
       courtReference: court
     });
-    this.markersArray.push(this.marker);
-    this.mapEventHandler();
+		this.markersArray.push(this.marker);
+
+		google.maps.event.addListener(this.marker,'mouseover',function(){
+			// marker.setIcon(icon2);
+			let newIcon = this.icon;
+			console.log(newIcon);
+			newIcon = newIcon.replace('000000', 'FFFFFF').replace('d9534f', '5cb85c');
+			this.setIcon(newIcon);
+			console.log();
+
+		});
+    google.maps.event.addListener(this.marker,'mouseout',function(){
+			let newIcon = this.icon;
+			console.log(newIcon);
+			newIcon = newIcon.replace('FFFFFF', '000000').replace('5cb85c', 'd9534f');
+			this.setIcon(newIcon);
+		});
+		
+		// this.mapEventHandler();
   }
 
   setMapOnAll(map) {
@@ -140,13 +157,5 @@ class Startpage extends Base {
     this.markersArray = [];
   }
 
-  mapEventHandler(){
-    google.maps.event.addListener(this.marker,'mouseover',function(){
-      $('img[src="'+this.icon+'"]').stop().animate({opacity: 2});
-    });
-    google.maps.event.addListener(this.marker,'mouseout',function(){
-      $('img[src="'+this.icon+'"]').stop().animate({opacity:.5});
-    });
-  }
 
 }
