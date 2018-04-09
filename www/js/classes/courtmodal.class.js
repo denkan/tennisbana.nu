@@ -6,7 +6,6 @@ class CourtModal extends Base {
 	
 	setCourt(court){
 		this.court = court;
-		console.log(this.court);
 	}
 
 	eventHandler(){

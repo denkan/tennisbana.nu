@@ -55,8 +55,19 @@ main .court-holder .court-heading {
   color: #fff;
 }
 main .court-holder .court-item {
+  cursor: pointer;
   background: #f0f0f0;
   color: black;
+}
+main .court-holder .court-item:hover {
+  background: #f9f9f9;
+}
+main .thumbnail-image {
+  cursor: pointer;
+  opacity: 0.8;
+}
+main .thumbnail-image:hover {
+  opacity: 1;
 }
 .cmn-toggle {
   position: absolute;

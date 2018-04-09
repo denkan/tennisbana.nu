@@ -7,6 +7,7 @@ class Startpage extends Base {
 		this.renderCourt();
     this.initMap();
     this.modal = new CourtModal;
+    this.eventHandler();
   }
 
   renderCourt() {
@@ -14,8 +15,8 @@ class Startpage extends Base {
     let co = 1;
     for (let court of this.filteredArray) {
       allCourtsHtml += `
-			<div class="py-2 px-4 court-item mb-3">
-				<h5 class="mb-0">${co}. ${court.title}</h5>
+      <div class="py-2 px-4 court-item mb-3">
+				<h5 class="mb-0" name="${court.title}">${co}. ${court.title}</h5>
 				<p class="text-muted mb-0">${court.address}</p>
 			</div>
       `;
@@ -142,13 +143,28 @@ class Startpage extends Base {
     this.markersArray = [];
   }
 
+  eventHandler(){
+    let that = this;
+    $(document).on('click', '.court-item', function(){
+      let title = $(this).children(':first').attr('name');
+      let foundCourt = app.allCourts.find((court) => title == court.title);
+      that.showModal(foundCourt);
+    })
+  };
+
+  showModal(court){
+    this.modal.setCourt(court);
+    this.modal.render();
+    $('#court-modal').modal('show');
+  }
+
   mapEventHandler(){
     let that = this;
+
     // On click
     google.maps.event.addListener(this.marker,'click',function(){
-      that.modal.setCourt(this.courtReference);
-      that.modal.render();
-      $('#court-modal').modal('show');
+      that.showModal(this.courtReference);
+
     });
 
     // Hovering effects
