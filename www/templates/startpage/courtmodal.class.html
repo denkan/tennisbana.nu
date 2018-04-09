@@ -1,0 +1,68 @@
+Object.assign(CourtModal.prototype, { template(){ return `
+    <div class="modal fade" id="court-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">${this.court.title}</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+							<div class="d-flex">
+								<div class="col-0 col-md-5 p-0">
+									<div class="img-holder col-12 pl-0"><img class="img-fluid big-image" src="${this.court.imgSource[0]}"></div>
+									<div class="template-holder col-12 d-flex mt-2 pl-0">
+										<div class="col-4 px-2"><img class="img-fluid thumbnail-image" src="${this.court.imgSource[0]}"> </div>
+										<div class="col-4 px-2"><img class="img-fluid thumbnail-image" src="${this.court.imgSource[1]}"> </div>
+										<div class="col-4 px-2"><img class="img-fluid thumbnail-image" src="${this.court.imgSource[2]}"> </div>									
+									</div>
+
+								</div>
+								<div class="col-12 col-md-7 p-0">
+									<h4>${this.court.title}</h4>
+									<h6>${this.court.description}</h6>
+									<hr>
+									<div class="col-12 p-0 d-flex flex-nowrap flex-md-row flex-column">
+										<div class="col-md-6 p-0">
+											<p class="mb-0">Kontakt:</p>
+											<p>04343232 23</p>
+
+											<p class="mb-0">Öppettider:</p>
+											<p>08.00 - 19.00</p>
+
+											<p class="mb-0">Adress: </p>
+											<p>${this.court.address}</p>
+
+										</div>
+										<div class="col-md-5 p-0">
+											<p class="mb-0">Underlag: </p>
+											<p>${this.court.courtSurface}</p>
+
+											<p class="mb-0">Boka:</p>
+											<p>Ej Bokningsbar</p>
+											
+											<p class="mb-0">Inomhus/Utomhus</p>
+											<p>${this.court.courtType}</p>
+
+										</div>
+									</div>
+
+								</div>
+							</div>
+							
+							
+
+
+
+
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+`;}});

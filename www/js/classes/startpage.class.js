@@ -5,7 +5,8 @@ class Startpage extends Base {
 		this.checkAllChecked();
 		this.render();
 		this.renderCourt();
-		this.initMap();
+    this.initMap();
+    this.modal = new CourtModal;
   }
 
   renderCourt() {
@@ -119,23 +120,7 @@ class Startpage extends Base {
     });
 		this.markersArray.push(this.marker);
 
-		google.maps.event.addListener(this.marker,'mouseover',function(){
-			// marker.setIcon(icon2);
-			let newIcon = this.icon;
-			console.log(newIcon);
-			newIcon = newIcon.replace('000000', 'FFFFFF').replace('d9534f', '5cb85c');
-			this.setIcon(newIcon);
-			console.log();
-
-		});
-    google.maps.event.addListener(this.marker,'mouseout',function(){
-			let newIcon = this.icon;
-			console.log(newIcon);
-			newIcon = newIcon.replace('FFFFFF', '000000').replace('5cb85c', 'd9534f');
-			this.setIcon(newIcon);
-		});
-		
-		// this.mapEventHandler();
+		this.mapEventHandler();
   }
 
   setMapOnAll(map) {
@@ -155,6 +140,30 @@ class Startpage extends Base {
   deleteMarkers() {
     this.clearMarkers();
     this.markersArray = [];
+  }
+
+  mapEventHandler(){
+    let that = this;
+    // On click
+    google.maps.event.addListener(this.marker,'click',function(){
+      that.modal.setCourt(this.courtReference);
+      that.modal.render();
+      $('#court-modal').modal('show');
+    });
+
+    // Hovering effects
+    google.maps.event.addListener(this.marker,'mouseover',function(){
+			// marker.setIcon(icon2);
+			let newIcon = this.icon;
+			newIcon = newIcon.replace('000000', 'FFFFFF').replace('d9534f', '5cb85c');
+			this.setIcon(newIcon);
+		});
+    google.maps.event.addListener(this.marker,'mouseout',function(){
+			let newIcon = this.icon;
+			newIcon = newIcon.replace('FFFFFF', '000000').replace('5cb85c', 'd9534f');
+			this.setIcon(newIcon);
+		});
+		
   }
 
 
