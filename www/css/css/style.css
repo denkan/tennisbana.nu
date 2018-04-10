@@ -5,6 +5,18 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+.scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f0f0f0;
+}
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f0f0f0;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #b8b8b8;
+}
 html {
   position: relative;
   min-height: 100%;
@@ -12,12 +24,11 @@ html {
 html body {
   font-family: "Roboto", sans-serif;
   font-size: 0.95em;
-}
-main #map {
-  min-height: 500px;
+  height: 100vh;
 }
 main .filter-holder {
   background: #c2c2c2;
+  overflow-y: auto;
 }
 main .filter-holder a:hover {
   text-decoration: none;
@@ -48,6 +59,7 @@ main .filter-holder .filter-secondary-heading {
 }
 main .court-holder {
   background: #c2c2c2;
+  overflow-y: auto;
 }
 main .court-holder .court-heading {
   font-size: 1.1em;
@@ -151,6 +163,55 @@ footer {
   /* Set the fixed height of the footer here */
   height: auto;
   line-height: 30px;
+  /* Vertically center the text there */
+  border-top: 20px solid black;
+  background: #c2c2c2;
+}
+footer .color {
+  background-color: #f0f0f0;
+  border-radius: 200px 5px;
+  padding: 10px 30px;
+}
+footer p {
+  line-height: 1.6em;
+  margin-bottom: 0;
+  color: #3f3f3f;
+}
+footer p .fa {
+  line-height: 30px;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+}
+footer p .fab {
+  line-height: 30px;
+  font-size: 33px;
+  width: 30px;
+  height: 29px;
+  text-align: center;
+  text-decoration: none;
+  background: white;
+  color: #3B5998;
+  border: none;
+}
+footer p .fab-facebook {
+  background: #3B5998;
+  color: white;
+}
+footer p .fa-envelope,
+footer p .fa-address-card,
+footer p .fa-phone {
+  background: black;
+  color: white;
+}
+footer p a,
+footer p a:hover {
+  color: #3f3f3f;
+}
+footer .myheight {
+  height: 100px;
 }
 header {
   background: linear-gradient(to bottom, #000000 0%, #000000 85%, #c2c2c2 85%, #c2c2c2 100%);

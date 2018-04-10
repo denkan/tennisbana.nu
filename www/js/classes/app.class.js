@@ -12,8 +12,8 @@ class App extends Base {
   }
 
   start(){
+    this.startpage = new Startpage();
     this.header = new Header();
     this.footer = new Footer();
-    this.startpage = new Startpage();
   }
 }

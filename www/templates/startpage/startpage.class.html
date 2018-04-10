@@ -1,7 +1,7 @@
 Object.assign(Startpage.prototype, { template(){ return `
-<div class="d-flex flex-md-nowrap flex-column flex-lg-row">
+<div class="d-flex flex-md-nowrap flex-column flex-lg-row main-holder">
 
-  <div class="col-lg-2 d-flex flex-column filter-holder p-0">
+  <div class="col-lg-2 d-flex flex-column filter-holder p-0 scrollbar">
     <a class="p-0" data-toggle="collapse" href="#collapseFilter" role="button" aria-expanded="false" aria-controls="collapseFilter">
       <div class="filter-heading">
         <i class="fa mr-2" aria-hidden="true"></i>Filter</div>
@@ -131,6 +131,6 @@ Object.assign(Startpage.prototype, { template(){ return `
   </div>
 
 
-  <div class="col-lg-3 court-holder p-0">
+  <div class="col-lg-3 court-holder scrollbar p-0">
   </div>
   `;}});
